@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <Button
+        android:id="@+id/botonTabla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boton Tabla" android:onClick="BotonTabla"
+        android:layout_marginBottom="91dp"
+        android:layout_above="@+id/botonRelative"
+        android:layout_alignRight="@+id/botonRelative"
+        android:layout_alignEnd="@+id/botonRelative"
+        android:layout_alignLeft="@+id/botonRelative"
+        android:layout_alignStart="@+id/botonRelative" />
+
+    <Button
+        android:id="@+id/botonRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boton Relative" android:onClick="BotonRelative"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <Button
+        android:id="@+id/botonGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boton Grid" android:onClick="BotonGrid"
+        android:layout_alignBaseline="@+id/botonRelative"
+        android:layout_alignBottom="@+id/botonRelative"
+        android:layout_alignLeft="@+id/botonLinear"
+        android:layout_alignStart="@+id/botonLinear"
+        android:layout_alignRight="@+id/botonLinear"
+        android:layout_alignEnd="@+id/botonLinear" />
+
+    <ImageButton
+        android:id="@+id/linearlayout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/linearlayout"
+        android:layout_above="@+id/botonGrid"
+        android:layout_alignRight="@+id/botonLinear"
+        android:layout_alignEnd="@+id/botonLinear"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="62dp" />
+
+    <Button
+        android:id="@+id/botonCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkbox" android:onClick="BotonCheckbox"
+        android:layout_below="@+id/botonRelative"
+        android:layout_alignLeft="@+id/botonRelative"
+        android:layout_alignStart="@+id/botonRelative"
+        android:layout_marginTop="83dp"
+        android:layout_alignRight="@+id/botonRelative"
+        android:layout_alignEnd="@+id/botonRelative" />
+
+    <Button
+        android:id="@+id/botonRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Radio" android:onClick="BotonRadio"
+        android:layout_below="@+id/botonRelative"
+        android:layout_alignLeft="@+id/botonGrid"
+        android:layout_alignStart="@+id/botonGrid"
+        android:layout_marginTop="83dp"
+        android:layout_alignRight="@+id/botonGrid"
+        android:layout_alignEnd="@+id/botonGrid" />
+
+</RelativeLayout>
+

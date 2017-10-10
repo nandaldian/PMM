@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.fercai.ejerbutton1.MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="350px"
+            android:layout_height="400px"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/horde"
+            android:scaleType="fitCenter"
+            android:id="@+id/horde"/>
+        <ImageButton
+            android:layout_width="350px"
+            android:layout_height="400px"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/alliance"
+            android:scaleType="centerInside"
+            android:id="@+id/alliance"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="Soy un fondo"
+        android:layout_gravity="center_vertical"
+        android:textAlignment="center"
+        android:id="@+id/imabackground"/>
+
+</LinearLayout>
