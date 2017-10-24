@@ -23,6 +23,12 @@ public class MainActivity extends AppCompatActivity {
             new Titular("Red Velvet", "Ingredientes","250 gr de mantequilla a temperatura ambiente, 600 gr de azúcar icing sugar, 250 gr de queso crema tipo philadelphia, 3 cucharadas de leche entera o semidesnatada (opcional).",R.drawable.tarta2 ),
             new Titular("Carrot Cake", "Ingredientes","Zanahorias medianas peladas, ralladas o picadas muy pequeñas (4), Harina (2 ½ cups o tazas – 275 g), Levadura (1 cucharadita), Bicarbonato (1 cucharadita), Canela en polvo (1 cucharadita), Azúcar (1 cup o taza – 225 g), Azúcar moreno (1 cup o taza – 200 g), Mantequilla sin sal, a temperatura ambiente (250 g), Huevos grandes, a temperatura ambiente (3), Extracto de vainilla (2 cucharaditas), Zumo de manzana o de naranja (½ cup o taza – 118 ml, aprox. medio vaso), Nata líquida para postres (3 cucharaditas)",R.drawable.tarta3)
     };
+    static class ViewHolder {
+        TextView titulo;
+        TextView subtitulo;
+        ImageView imagen;
+        TextView ingredientes;
+    }
 
 
     @Override
@@ -51,21 +57,35 @@ public class MainActivity extends AppCompatActivity {
             this.context = context;
         }
 
-        public View getView(int position, View convertView, ViewGroup parent) {
-            LayoutInflater inflater = context.getLayoutInflater();
-            View item = inflater.inflate(R.layout.listitem_titular, null);
-            TextView lblTitulo = (TextView) item.findViewById(R.id.LblTitulo);
-            lblTitulo.setText(datos[position].getTitulo());
-            TextView lblSubtitulo = (TextView) item.findViewById(R.id.LblSubTitulo);
-            lblSubtitulo.setText(datos[position].getSubtitulo());
-            TextView lblIngredientes = (TextView) item.findViewById(R.id.LblIngredientes);
-            lblIngredientes.setText(datos[position].getIngredientes());
 
-            ImageView imagen = (ImageView) item.findViewById(R.id.ivlimagen);
-            imagen.setBackground(getDrawable(datos[position].getImagen()));
-            return (item);
+        public View getView(int position, View convertView, ViewGroup parent)
+            { View item = convertView;
+                ViewHolder holder;
+                if(item == null)
+                {
+                    LayoutInflater inflater = context.getLayoutInflater();
+                    item = inflater.inflate(R.layout.listitem_titular, null);
+
+                    holder = new ViewHolder();
+                    holder.titulo = (TextView)item.findViewById(R.id.LblTitulo);
+                    holder.subtitulo = (TextView)item.findViewById(R.id.LblSubTitulo);
+                    holder.imagen = (ImageView)item.findViewById(R.id.ivlimagen);
+                    holder.ingredientes = (TextView)item.findViewById(R.id.LblIngredientes);
+                    item.setTag(holder);
+                }
+                else {
+                    holder = (ViewHolder) item.getTag();
+                }
+                holder.titulo.setText(datos[position].getTitulo());
+                holder.subtitulo.setText(datos[position].getSubtitulo());
+                holder.imagen.setBackground(getDrawable(datos[position].getImagen()));
+                holder.ingredientes.setText(datos[position].getIngredientes());
+                return(item);
+
+
         }
     }
+
 
 }
 
