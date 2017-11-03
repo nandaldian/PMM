@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="..... ejemplo desde Layout (Shape)"
         />
-    <View
+    <view
         class="com.example.fercai.ejemplodibujos3.VistaDibujo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
