@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pantalla__aplicacion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="#8bf9c4"
+    tools:context="com.example.fercai.proyectofinal.Aplication_Screen">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="60px"
+        android:textColor="#333635"
+        android:text="Elige un producto" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkBox3"
+        android:layout_marginBottom="25dp"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="33dp"
+        android:text="GIGABYTE"
+        android:textColor="#333635" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="ASUS/SAPPHIRE"
+        android:textColor="#333635" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/boton_comprar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="MSI"
+        android:textColor="#333635" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/checkBox"
+        android:layout_toEndOf="@id/checkBox2"
+        android:layout_toRightOf="@id/checkBox3">
+        <RadioButton
+            android:id="@+id/pago_tarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAGO CON TARJ. CRÉDITO"
+            android:textColor="#333635"/>
+
+        <RadioButton
+            android:id="@+id/pago_efectivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAGO EN EFECTIVO"
+            android:textColor="#333635"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/boton_comprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="COMPRAR" />
+
+</RelativeLayout>

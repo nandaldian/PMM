@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pantalla__registro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    android:background="#8bf9c4"
+    tools:context="com.example.fercai.proyectofinal.LoginScreen">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:textAlignment="center"
+        android:textColor="#252826"
+        android:textSize="60px" />
+
+    <TextView
+        android:text="USUARIO"
+        android:layout_width="500px"
+        android:textColor="#11632c"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20px"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:textColorHint="#252826"
+        android:textColor="#252826"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:inputType="textPersonName"
+        android:hint="Usuario"
+        android:id="@+id/registro_cliente" />
+
+    <TextView
+        android:text="CONTRASEÑA"
+        android:layout_width="500px"
+        android:textColor="#11632c"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10px"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:hint="Contraseña"
+        android:textColorHint="#252826"
+        android:textColor="#252826"
+        android:inputType="textPassword"
+        android:id="@+id/registro_contraseña" />
+
+    <Button
+        android:id="@+id/registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="REGISTRARSE" />
+
+    <Button
+        android:id="@+id/volver_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="VOLVER" />
+</LinearLayout>
